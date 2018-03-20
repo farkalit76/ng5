@@ -58,19 +58,33 @@
     -->
 
     </div>
-    
-  <div class="form-group"  [ngClass]="{
-        'has-danger': password.invalid && (password.dirty || password.touched),
-        'has-success': password.valid && (password.dirty || password.touched)
-      }">
-    <label class="form-label" >Password</label>
-    <input type="password"  class="form-control"  formControlName="password"  required>
-    <div class="form-control-feedback"
-         *ngIf="password.errors && (password.dirty || password.touched)">
-      <p *ngIf="password.errors.required">Password is required</p>
-      <p *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
+
+    <div class="form-group"  [ngClass]="{
+          'has-danger': zip.invalid && (zip.dirty || zip.touched),
+          'has-success': zip.valid && (zip.dirty || zip.touched)
+        }">
+      <label class="form-label" >ZIP</label>
+      <input type="zip"  class="form-control"  formControlName="zip"  required>
+      <div class="form-control-feedback"
+          *ngIf="zip.errors && (zip.dirty || zip.touched)">
+        <p *ngIf="zip.errors.required">ZIP is required</p>
+        <p *ngIf="zip.errors.minlength">ZIP must be at least 5 digit. </p>
+        <p *ngIf="zip.errors.pattern">ZIP must be integer only. </p>
+      </div>
     </div>
-  </div>
+    
+    <div class="form-group"  [ngClass]="{
+          'has-danger': password.invalid && (password.dirty || password.touched),
+          'has-success': password.valid && (password.dirty || password.touched)
+        }">
+      <label class="form-label" >Password</label>
+      <input type="password"  class="form-control"  formControlName="password"  required>
+      <div class="form-control-feedback"
+          *ngIf="password.errors && (password.dirty || password.touched)">
+        <p *ngIf="password.errors.required">Password is required</p>
+        <p *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
+      </div>
+    </div>
 
   <div class="form-group"  [ngClass]="{
         'has-danger': language.invalid && (language.dirty || language.touched),

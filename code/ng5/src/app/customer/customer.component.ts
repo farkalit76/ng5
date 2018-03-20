@@ -15,6 +15,7 @@ export class CustomerComponent implements OnInit {
   firstName: FormControl;
   lastName: FormControl;
   email: FormControl;
+  zip: FormControl;
   password: FormControl;
   language: FormControl;
 
@@ -43,6 +44,11 @@ export class CustomerComponent implements OnInit {
       Validators.required,
       Validators.pattern("[^ @]*@[^ @]*")
     ]);
+    this.zip = new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.pattern("[0-9]*")
+    ]);
     this.password = new FormControl('', [
       Validators.required,
       Validators.minLength(8)
@@ -58,6 +64,7 @@ export class CustomerComponent implements OnInit {
           lastName: this.lastName,
         }),
         email: this.email,
+        zip:this.zip,
         password: this.password,
         language: this.language
     });
