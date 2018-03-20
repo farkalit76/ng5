@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     
-    this.myData.goal.subscribe(res => this.goals=res);
+    this.myData.goal.subscribe(res => this.goals = res);
     this.itemCount = this.goals.length;
     this.myData.changeGoal(this.goals);
   }
