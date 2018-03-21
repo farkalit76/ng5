@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MyHttpInterceptor } from './../my-http-interceptor';
 
 @Component({
   selector: 'app-restfull',
@@ -60,6 +61,20 @@ export class RestfullComponent implements OnInit {
           this.id = data[0].id;
           this.idFound = true;
         }
+      }
+    )
+  }
+
+  postProfile()
+  {
+    //console.log(this.title);
+    this.httpClient.post(`https://my-json-server.typicode.com/typicode/demo/posts/`,{
+      id: '5',
+      title: 'Post Title 5'
+    })
+    .subscribe(
+      (data:any) =>{
+        console.log(data)
       }
     )
   }
