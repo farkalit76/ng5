@@ -1,14 +1,14 @@
 
 .form-label{
     display: inline-block; 
-    width: 100px;
+    width: 500px;
     padding: 5px 5px 5px 5px;
     font-size: 1em;
     font-family: Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
 .form-group {
-    width: 60%; 
+    width: 100%; 
     padding: 2px 2px 10px 2px;
 }
 

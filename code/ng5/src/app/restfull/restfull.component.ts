@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MyHttpInterceptor } from './../my-http-interceptor';
 
 @Component({
   selector: 'app-restfull',

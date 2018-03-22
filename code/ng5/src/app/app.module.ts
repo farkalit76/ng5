@@ -23,6 +23,8 @@ import { AboutComponent } from './about/about.component';
 import { Component } from '@angular/core/src/metadata/directives';
 import { CustomerComponent } from './customer/customer.component';
 import { RestfullComponent } from './restfull/restfull.component';
+import { TodoComponent } from './todo/todo.component';
+import { TodoService } from './todo/todo.service';
 
 
 const routes: Routes =[
@@ -33,6 +35,10 @@ const routes: Routes =[
   {
     path:'customer',
     component: CustomerComponent
+  },
+  {
+    path:'todo',
+    component: TodoComponent
   },
   {
     path:'restfull',
@@ -50,7 +56,8 @@ const routes: Routes =[
     HomeComponent,
     AboutComponent,
     CustomerComponent,
-    RestfullComponent
+    RestfullComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +71,7 @@ const routes: Routes =[
       //{enableTracing:true}
     )
   ],
-  providers: [DataService],
+  providers: [DataService,TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
