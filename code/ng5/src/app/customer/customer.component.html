@@ -5,7 +5,7 @@
 <form novalidate   [formGroup]="myForm">
 
   <fieldset formGroupName="name">
-    <div   [ngClass]="{
+    <div class="form-group"  [ngClass]="{
         'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
         'has-success': firstName.valid && (firstName.dirty || firstName.touched)
       }">
