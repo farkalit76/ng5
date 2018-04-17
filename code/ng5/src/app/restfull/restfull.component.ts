@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient  } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-restfull',
   templateUrl: './restfull.component.html',
   styleUrls: ['./restfull.component.css']
 })
+
 export class RestfullComponent implements OnInit {
 
   id:string='';

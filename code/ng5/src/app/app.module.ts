@@ -25,6 +25,12 @@ import { CustomerComponent } from './customer/customer.component';
 import { RestfullComponent } from './restfull/restfull.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoService } from './todo/todo.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { SortviewComponent } from './sortview/sortview.component';
+//pagination
+import {NgxPaginationModule} from 'ngx-pagination';
+//Sorting material module aprt from animation module
+import {Sort, MatTableModule, MatSortModule} from '@angular/material';
 
 
 const routes: Routes =[
@@ -35,6 +41,14 @@ const routes: Routes =[
   {
     path:'customer',
     component: CustomerComponent
+  },
+  {
+    path:'employee',
+    component: EmployeeComponent
+  },
+  {
+    path:'sortview',
+    component: SortviewComponent
   },
   {
     path:'todo',
@@ -57,7 +71,9 @@ const routes: Routes =[
     AboutComponent,
     CustomerComponent,
     RestfullComponent,
-    TodoComponent
+    TodoComponent,
+    EmployeeComponent,
+    SortviewComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +82,9 @@ const routes: Routes =[
     BrowserAnimationsModule,
     HttpClientModule,
     MyHttpInterceptor,
+    NgxPaginationModule,
+    MatTableModule,
+    MatSortModule,
     RouterModule.forRoot(
       routes,
       //{enableTracing:true}
